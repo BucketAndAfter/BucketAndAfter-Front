@@ -95,7 +95,8 @@ textarea {
   background: #fff;
   font: inherit;
   line-height: 1.6;
-  resize: vertical;
+  overflow-y: hidden;
+  resize: none;
 }
 
 textarea::placeholder { color: var(--placeholder); }
