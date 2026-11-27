@@ -6,7 +6,7 @@ main {
 
 .container { flex: 1; }
 .list-intro { margin-bottom: 24px; }
-.eyebrow { margin: 0 0 9px; color: #287fbd; font-size: 11px; font-weight: 800; letter-spacing: 1.8px; }
+.eyebrow { margin: 0 0 9px; color: #287fbd; font-size: 11px; font-weight: 800; letter-spacing: 0.5px; }
 .page-title { margin: 0; color: var(--main-800); font-size: clamp(28px, 4vw, 36px); letter-spacing: -1.1px; }
 .page-description { margin: 10px 0 0; color: var(--ink-soft); font-size: 14px; }
 
