@@ -60,6 +60,13 @@
       const formError = document.getElementById("formError");
       const textFields = [titleField, infoField];
 
+      titleField.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+          event.preventDefault();
+          infoField.focus();
+        }
+      });
+
       function refreshFieldErrors() {
         const allFieldsFilled = textFields.every((field) => field.value.trim() !== "");
         formError.hidden = allFieldsFilled;
