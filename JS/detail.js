@@ -1,3 +1,5 @@
+import { formatAchievementDate } from "./date-utils.js";
+
 const titleField = document.getElementById("titleField");
 const detailTextarea = document.getElementById("detail");
 const logTextarea = document.getElementById("log");
@@ -21,18 +23,6 @@ const bucketLists = JSON.parse(localStorage.getItem("bucketLists") || "[]");
 const bucketList = indexText === null ? null : bucketLists[index];
 const detailTitle = document.getElementById("detailTitle");
 const deleteBtn = document.getElementById("deleteButton");
-
-function formatAchievementDate(value) {
-  if (!value) return "미기록";
-  const dateOnly = String(value).match(/^(\d{4})-(\d{2})-(\d{2})$/);
-  if (dateOnly) return `${dateOnly[1]}.${dateOnly[2]}.${dateOnly[3]}`;
-
-  const date = new Date(value);
-  if (Number.isNaN(date.getTime())) return "미기록";
-  const month = String(date.getMonth() + 1).padStart(2, "0");
-  const day = String(date.getDate()).padStart(2, "0");
-  return `${date.getFullYear()}.${month}.${day}`;
-}
 
 function getLocalDateString() {
   const today = new Date();

@@ -30,7 +30,7 @@
         <div class="contents">
           <div class="content">
             <h2>제목</h2>
-            <input id="titleField" type="text" aria-label="제목" disabled />
+            <input id="titleField" type="text" aria-label="제목" placeholder="버킷리스트의 제목을 입력해 주세요." disabled />
             <p id="titleError" class="field-error" role="alert" hidden>텍스트 필드를 전부 채워주세요.</p>
             <div class="buttons">
               <button id="titleButton" type="button" class="sec-btn">수정하기</button>
@@ -38,7 +38,7 @@
           </div>
           <div class="content">
             <h2 for="detail">세부사항</h2>
-            <textarea name="세부사항" id="detail" placeholder="세부사항 내용~" disabled></textarea>
+            <textarea name="세부사항" id="detail" placeholder="버킷리스트에 대한 기대, 계획 등 세부사항 내용을 입력해 주세요." disabled></textarea>
             <p id="detailError" class="field-error" role="alert" hidden>텍스트 필드를 전부 채워주세요.</p>
             <div class="buttons">
               <button id="detailButton" type="button" class="sec-btn">수정하기</button>
@@ -49,13 +49,13 @@
             <textarea
               name="소감"
               id="log"
-              placeholder="감상을 작성해보세요"
+              placeholder="달성 이후의 감상을 작성해보세요. &#13;&#10;예: 너무 좋았다, 힘들었지만 보람찼다, 다음에는 더 잘하고 싶다."
             disabled></textarea>
             <p id="logError" class="field-error" role="alert" hidden>텍스트 필드를 전부 채워주세요.</p>
             <div id="photoControls" class="photo-controls" hidden>
               <label for="thoughtPhotoInput" class="photo-upload">사진 추가</label>
               <input id="thoughtPhotoInput" type="file" accept="image/*" multiple hidden />
-              <span>최대 5장 · 사진은 저장 후 이 화면에 표시됩니다.</span>
+              <span>사진 추가는 최대 5장 입니다.</span>
             </div>
             <p id="photoError" class="field-error" role="alert" hidden></p>
             <div id="thoughtPhotoGallery" class="thought-photo-gallery" aria-label="달성 소감 사진"></div>
@@ -75,7 +75,7 @@
       <button type="button" id="closePhotoViewer" class="photo-viewer-close">닫기</button>
       <img id="photoViewerImage" alt="" />
     </dialog>
-    <script src="detail.js"></script>
+    <script type="module" src="/JS/detail.js"></script>
     <script src="textarea-autogrow.js"></script>
   </body>
 </html>
